@@ -29,5 +29,35 @@ public class Flag {
     	// half circles
     	StdDraw.filledCircle(0.65, 0.61, 0.15);
     	StdDraw.filledCircle(0.35, 0.61, 0.15);
+
+		// cat !!!
+    	double catX = 0.5;
+    	double catY = 0.5;
+    	double catR = 0.1;
+    	
+    	StdDraw.setPenColor(251,172,190);
+    	StdDraw.filledCircle(catX, catY, catR);
+    	
+    	// ears (pointing upward)
+    	double[] xLeftEar = {catX, catX - 0.07, catX - 0.099};
+    	double[] yLeftEar = {catY + 0.015, catY + 0.15, catY + 0.02};
+    	StdDraw.filledPolygon(xLeftEar, yLeftEar);
+    	
+    	double[] xRightEar = {catX, catX + 0.07, catX + 0.099};
+    	double[] yRightEar = {catY + 0.015, catY + 0.15, catY + 0.02};
+    	StdDraw.filledPolygon(xRightEar, yRightEar);
+    	
+    	// eyes
+    	StdDraw.setPenColor(Color.black);
+    	StdDraw.filledCircle(catX - 0.06, catY, 0.01);
+    	StdDraw.filledCircle(catX + 0.06, catY, 0.01);
+    	
+    	// mouth
+    	StdDraw.setPenColor(Color.black);
+    	StdDraw.setFont(new java.awt.Font("arial", java.awt.Font.PLAIN, 18));
+    	StdDraw.text(catX, catY - 0.02, "ω");
+    	StdDraw.textLeft(0, 0, ""); // forces rendering
+    	StdDraw.text(catX, catY - 0.02, "ω");
+    	StdDraw.text(catX, catY - 0.02, "ω");
 	}
 }
