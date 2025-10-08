@@ -16,8 +16,18 @@ public class Flag {
 		StdDraw.setPenColor(44,73,127);
 		
 		// sword !!!
-		StdDraw.filledRectangle(0.5, 0.5, 0.05, 0.4);
-
+		//blade
+		StdDraw.filledRectangle(0.5, 0.5, 0.05, 0.3);
+		double[] stipX = {0.45, 0.55, 0.5};
+		double[] stipY = {0.2005, 0.2005, 0.10};
+		StdDraw.filledPolygon(stipX, stipY);
+		//guard
+		StdDraw.filledRectangle(0.5, 0.8, 0.2, 0.025);
+		StdDraw.filledRectangle(0.5, 0.85, 0.03, 0.07);
+		StdDraw.filledCircle(0.7, 0.80, 0.04);
+		StdDraw.filledCircle(0.3, 0.80, 0.04);
+		//pommel
+		StdDraw.filledCircle(0.5, 0.945, 0.05);
 		StdDraw.setPenColor(Color.white);
 
 		// heart !!!
